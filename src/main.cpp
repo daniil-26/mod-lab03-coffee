@@ -2,8 +2,7 @@
 #include "Automata.h"
 
 
-int main()
-{
+int main() {
     Automata A;
     A.on();
     A.coin(100);
