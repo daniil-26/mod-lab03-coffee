@@ -1,8 +1,6 @@
 // Copyright 2022 UNN-IASR
 #include "Automata.h"
-
-using std::cout;
-using std::endl;
+#include <iostream>
 
 
 Automata::Automata() {
@@ -29,14 +27,14 @@ void Automata::coin(unsigned int sum) {
         cash += sum;
         state = ACCEPT;
     } else {
-        cout << "Operation cannot be performed" << endl;
+        std::cout << "Operation cannot be performed" << std::endl;
     }
 }
 
 void Automata::getMenu() {
-    cout << "Menu:" << endl;
+    std::cout << "Menu:" << std::endl;
     for (int i = 0; i < sizeof(menu) / sizeof(menu[0]); i++) {
-        cout << i + 1 << ") " << menu[i] << " -  " << prices[i] << endl;
+        std::cout << i + 1 << ") " << menu[i] << " -  " << prices[i] << std::endl;
     }
 }
 
@@ -51,10 +49,10 @@ void Automata::choice(unsigned int num) {
             state = CHECK;
             check();
         } else {
-            cout << "Incorrect choice" << endl;
+            std::cout << "Incorrect choice" << std::endl;
         }
     } else {
-    cout << "Operation cannot be performed" << endl;
+    std::cout << "Operation cannot be performed" << std::endl;
     }
 }
 
@@ -64,7 +62,7 @@ void Automata::cancel() {
         cash = 0;
         state = WAIT;
     } else {
-        cout << "Operation cannot be performed" << endl;
+        std::cout << "Operation cannot be performed" << std::endl;
     }
 }
 
@@ -74,7 +72,7 @@ void Automata::check() {
             getChange(prices[num_of_chosen_drink]);
             cook();
         } else {
-            cout << "Insufficient funds" << endl;
+            std::cout << "Insufficient funds" << std::endl;
             cancel();
         }
     }
@@ -83,7 +81,7 @@ void Automata::check() {
 void Automata::cook() {
     if (state == CHECK) {
         state = COOK;
-        cout << "Your " << menu[num_of_chosen_drink] << " is ready" << endl;
+        std::cout << "Your " << menu[num_of_chosen_drink] << " is ready" << std::endl;
         finish();
     }
 }
@@ -97,5 +95,5 @@ void Automata::finish() {
 
 void Automata::getChange(unsigned int price) {
     if (cash - price != 0)
-    cout << "Take the change: " << cash - price << endl;
+    std::cout << "Take the change: " << cash - price << std::endl;
 }
