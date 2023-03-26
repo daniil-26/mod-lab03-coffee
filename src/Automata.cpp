@@ -34,7 +34,9 @@ void Automata::coin(unsigned int sum) {
 void Automata::getMenu() {
     std::cout << "Menu:" << std::endl;
     for (int i = 0; i < sizeof(menu) / sizeof(menu[0]); i++) {
-        std::cout << i + 1 << ") " << menu[i] << " -  " << prices[i] << std::endl;
+        std::cout << i + 1 << ") " 
+            << menu[i] << " -  " << prices[i] 
+            << std::endl;
     }
 }
 
@@ -81,7 +83,8 @@ void Automata::check() {
 void Automata::cook() {
     if (state == CHECK) {
         state = COOK;
-        std::cout << "Your " << menu[num_of_chosen_drink] << " is ready" << std::endl;
+        std::cout << "Your " << menu[num_of_chosen_drink] 
+            << " is ready" << std::endl;
         finish();
     }
 }
