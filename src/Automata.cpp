@@ -1,6 +1,8 @@
 // Copyright 2022 UNN-IASR
 #include "Automata.h"
-#include <iostream>
+
+using std::cout;
+using std::endl;
 
 
 Automata::Automata() {
