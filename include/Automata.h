@@ -1,6 +1,5 @@
-// Copyright 2022 UNN-IASR
-#ifndef INCLUDE_AUTOMATA_H_
-#define INCLUDE_AUTOMATA_H_
+// Copyright 2023 UNN-IASR
+#pragma once
 #include <string>
 
 
