@@ -100,3 +100,4 @@ void Automata::getChange(unsigned int price) {
     if (cash - price != 0)
     std::cout << "Take the change: " << cash - price << std::endl;
 }
+ 
