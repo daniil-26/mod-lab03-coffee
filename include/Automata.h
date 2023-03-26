@@ -7,11 +7,11 @@ enum STATES {OFF, WAIT, ACCEPT, CHECK, COOK};
 class Automata {
  private:
     unsigned int cash;
-    std::string menu[6] = {"americano", 
-                           "cappuccino", 
-                           "latte", 
-                           "espresso", 
-                           "hot chocolate", 
+    std::string menu[6] = {"americano",
+                           "cappuccino",
+                           "latte",
+                           "espresso",
+                           "hot chocolate",
                            "tea"};
     unsigned int prices[6] = {100, 90, 80, 90, 80, 40};
     STATES state;
