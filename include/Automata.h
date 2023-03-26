@@ -5,14 +5,19 @@
 enum STATES {OFF, WAIT, ACCEPT, CHECK, COOK};
 
 class Automata {
-private:
+ private:
     unsigned int cash;
-    std::string menu[6] = {"americano", "cappuccino", "latte", "espresso", "hot chocolate", "tea"};
+    std::string menu[6] = {"americano", 
+                           "cappuccino", 
+                           "latte", 
+                           "espresso", 
+                           "hot chocolate", 
+                           "tea"};
     unsigned int prices[6] = {100, 90, 80, 90, 80, 40};
     STATES state;
     unsigned int num_of_chosen_drink;
 
-public:
+ public:
     Automata();
     void on();
     void off();
@@ -22,7 +27,7 @@ public:
     void choice(unsigned int num);
     void cancel();
 
-private:
+ private:
     void check();
     void cook();
     void finish();
