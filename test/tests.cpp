@@ -4,15 +4,13 @@
 #include "Automata.h"
 
 
-TEST(on, test1)
-{
+TEST(on, test1) {
     Automata A;
     A.on();
     EXPECT_EQ(WAIT, A.getState());
 }
 
-TEST(on, test2)
-{
+TEST(on, test2) {
     Automata A;
     A.on();
     A.coin(1);
@@ -20,14 +18,12 @@ TEST(on, test2)
     EXPECT_EQ(ACCEPT, A.getState());
 }
 
-TEST(off, test3)
-{
+TEST(off, test3) {
     Automata A;
     EXPECT_EQ(OFF, A.getState());
 }
 
-TEST(off, test4)
-{
+TEST(off, test4) {
     Automata A;
     A.on();
     A.coin(1);
@@ -35,8 +31,7 @@ TEST(off, test4)
     EXPECT_EQ(OFF, A.getState());
 }
 
-TEST(cancel, test5)
-{
+TEST(cancel, test5) {
     Automata A;
     A.on();
     A.coin(1);
@@ -44,8 +39,7 @@ TEST(cancel, test5)
     EXPECT_EQ(WAIT, A.getState());
 }
 
-TEST(cancel, test6)
-{
+TEST(cancel, test6) {
     Automata A;
     A.on();
     A.coin(1);
@@ -53,8 +47,7 @@ TEST(cancel, test6)
     EXPECT_EQ(WAIT, A.getState());
 }
 
-TEST(coin, test7)
-{
+TEST(coin, test7) {
     Automata A;
     A.on();
     A.coin(1);
@@ -62,8 +55,7 @@ TEST(coin, test7)
     EXPECT_EQ(ACCEPT, A.getState());
 }
 
-TEST(insufficient_funds, test8)
-{
+TEST(insufficient_funds, test8) {
     Automata A;
     A.on();
     A.coin(10);
@@ -71,8 +63,7 @@ TEST(insufficient_funds, test8)
     EXPECT_EQ(WAIT, A.getState());
 }
 
-TEST(correct_work, test9)
-{
+TEST(correct_work, test9) {
     Automata A;
     A.on();
     A.coin(10);
