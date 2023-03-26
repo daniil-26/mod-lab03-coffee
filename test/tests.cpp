@@ -65,20 +65,20 @@ TEST(coin, test7)
 TEST(insufficient_funds, test8)
 {
     Automata A;
-A.on();
-A.coin(10);
-A.choice(4);
-EXPECT_EQ(WAIT, A.getState());
+    A.on();
+    A.coin(10);
+    A.choice(4);
+    EXPECT_EQ(WAIT, A.getState());
 }
 
 TEST(correct_work, test9)
 {
-Automata A;
-A.on();
-A.coin(10);
-A.cancel();
-A.coin(50);
-A.coin(50);
-A.choice(2);
-EXPECT_EQ(WAIT, A.getState());
+    Automata A;
+    A.on();
+    A.coin(10);
+    A.cancel();
+    A.coin(50);
+    A.coin(50);
+    A.choice(2);
+    EXPECT_EQ(WAIT, A.getState());
 }
