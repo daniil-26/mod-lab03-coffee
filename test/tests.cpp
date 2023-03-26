@@ -1,5 +1,4 @@
 // Copyright 2023 GHA Test Team
-
 #include <gtest/gtest.h>
 #include "Automata.h"
 
